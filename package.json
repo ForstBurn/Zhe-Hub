@@ -1,0 +1,42 @@
+{
+  "name": "partygame",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:rules && npm run test:sync && npm run test:local",
+    "test:rules": "node scripts/smoke-rules.cjs",
+    "test:sync": "node scripts/smoke-sync.cjs",
+    "test:local": "node scripts/smoke-local-transport.cjs"
+  },
+  "dependencies": {
+    "@livekit/components-react": "^2.9.13",
+    "@supabase/supabase-js": "^2.58.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.18.2",
+    "livekit-client": "^2.15.4",
+    "livekit-server-sdk": "^2.14.0",
+    "next": "^14.2.35",
+    "phaser": "^3.90.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0",
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.24",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}
